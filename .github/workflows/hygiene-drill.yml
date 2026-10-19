@@ -1,0 +1,22 @@
+name: Hygiene Drill
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  hygiene-drill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Banner
+        run: |
+          echo "Log hygiene drill — dry run of the quarterly repo-hygiene audit checklist."
+          echo "This workflow just echoes a few lines; nothing else happens here."
+
+      - name: Marker
+        run: |
+          echo "marker LOG-HYGIENE-OK"
+
+      - name: Footer
+        run: |
+          echo "Marker printed; drill complete."
